@@ -1,7 +1,7 @@
 const ingredients = document.querySelector('#ingredients');
 let ingredientList = [];
 let selectedIngredients = [];
-const drinklist = document.querySelector('#drinklist');
+const drinkList = document.querySelector('#drinklist');
 let filteredDrinks = [];
 
 $.ajax('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
@@ -14,12 +14,22 @@ $.ajax('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
         }
     });
 
+// $.ajax('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin')
+//     .then((data) => {
+//         for(let drink in data.drinks){
+//             filteredDrinks.push(data.drinks[drink].strDrink)
+//             const $li = $('<li>');
+//             $li.text(data.drinks[drink].strDrink)
+//             $('ul').append($li)
+//         }
+//     })
+
 $.ajax('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin')
     .then((data) => {
         for(let drink in data.drinks){
             filteredDrinks.push(data.drinks[drink].strDrink)
-            const $li = $('<li>');
-            $li.text(data.drinks[drink].strDrink)
-            $('ul').append($li)
+            const $div = $('<div id=new-drink>');
+            $div.html(`<img src="${data.drinks[drink].strDrinkThumb}" alt="${data.drinks[drink].strDrink}"/>${data.drinks[drink].strDrink}`)
+            $(drinkList).append($div);
         }
     })
