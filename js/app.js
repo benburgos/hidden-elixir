@@ -13,8 +13,8 @@ const $ul = $('ul');
 $.ajax('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
     .then((data) => {
         for(let ingredient in data.drinks){
-            const $li = $('<li>');
-            $li.text(data.drinks[ingredient].strIngredient1)
-            $ul.append($li)
+            const $button = $('<button>');
+            $button.text(data.drinks[ingredient].strIngredient1)
+            $('#ingredients').append($button)
         }
     })
