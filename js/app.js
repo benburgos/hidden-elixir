@@ -3,6 +3,7 @@ let ingredientList = [];
 let selectedIngredients = [];
 const drinkList = document.querySelector('#drinklist');
 let filteredDrinks = [];
+let drinkIds = [];
 
 $.ajax('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
     .then((data) => {
@@ -13,16 +14,6 @@ $.ajax('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
             $(ingredients).append($button)
         }
     });
-
-// $.ajax('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin')
-//     .then((data) => {
-//         for(let drink in data.drinks){
-//             filteredDrinks.push(data.drinks[drink].strDrink)
-//             const $li = $('<li>');
-//             $li.text(data.drinks[drink].strDrink)
-//             $('ul').append($li)
-//         }
-//     })
 
 $.ajax('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin')
     .then((data) => {

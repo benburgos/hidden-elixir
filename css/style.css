@@ -1,5 +1,6 @@
 body {
     background-color: teal;
+    color: white;
 }
 
 button {
@@ -17,4 +18,5 @@ img {
 
 #new-drink {
     color: white;
+    font-weight: bold;
 }
