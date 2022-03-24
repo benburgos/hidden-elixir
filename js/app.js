@@ -9,3 +9,12 @@ $.ajax('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
             $(ingredients).append($button)
         }
     });
+
+$.ajax('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin')
+    .then((data) => {
+        for(let drink in data.drinks){
+            const $li = $('<li>');
+            $li.text(data.drinks[drink].strDrink)
+            $('ul').append($li)
+        }
+    })
