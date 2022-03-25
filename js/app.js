@@ -8,10 +8,10 @@ let drinkIds = [];
 $.ajax('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
     .then((data) => {
         for(let ingredient in data.drinks){
-            ingredientList.push(data.drinks[ingredient].strIngredient1)
+            ingredientList.push(data.drinks[ingredient].strIngredient1);
             const $button = $('<button>');
-            $button.text(ingredientList[ingredient])
-            $(ingredients).append($button)
+            $button.text(ingredientList[ingredient]);
+            $(ingredients).append($button);
         }
     });
 
@@ -25,4 +25,3 @@ $.ajax('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin')
         }
     })
 
-console.log($('button'))
