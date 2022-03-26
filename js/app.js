@@ -35,8 +35,9 @@ $('#addIt').click(function(){
               drinkId: data.drinks[drink].idDrink,
             }
         }
-  $('#myInput').val('');
-})});
+    $('#myInput').val('');
+  })
+});
 
 $('#showMe').click(render = () => {
   ordered = ordered.sort();
@@ -51,7 +52,14 @@ $('#showMe').click(render = () => {
   console.log(filteredDrinks)
 });
 
-
+document.querySelector('#startOver').addEventListener('click', () => {
+  ingredientList = [];
+  selectedIngredients = [];
+  filteredDrinks = {};
+  ordered = [];
+  ingredients.innerHTML = "";
+  drinkList.innerHTML = "";
+})
 
 function autocomplete(inp, arr) {
     var currentFocus;
