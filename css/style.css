@@ -6,12 +6,18 @@ body {
     border-radius: 15px;
     display: flex;
     flex-direction: column;
+    margin: 20px 20px 20px 20px;
     text-align: center;
 }
 
 h1 {
     font-family: 'Mansalva', cursive;
     font-size: 75px;
+}
+
+p {
+    font-family: 'Mansalva', cursive;
+    font-size: 25px;
 }
 
 button {
@@ -32,19 +38,38 @@ img {
 }
 
 #myInput {
-    width: 400px;
+    width: 300px;
+    height: 25px;
     font-family: 'Hubballi', cursive;
     font-size: 18px;
+    text-align: center;
+    margin: 5px;
+    border: 1px solid #d4d4d4;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+#ingredients {
+    margin: 15px;
+    border: 2px dotted;
+    border-radius: 15px;
+    padding: 12px 15px;
+}
+
+#ingredients:empty { 
+    border: none;
 }
 
 .autocomplete {
     position: relative;
     display: inline-block;
-  }
+}
+
 #drinklist {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    margin: 5px 5px 5px 5px;
 }
 
 #new-drink {
@@ -53,10 +78,12 @@ img {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
+    align-content: center;
     width: 25%;
     border: 3px solid;
     border-radius: 15px;
     padding: 12px 15px;
+    margin: 5px 5px 5px 5px;
 }
 
 .autocomplete-items {
@@ -68,6 +95,8 @@ img {
     top: 100%;
     left: 0;
     right: 0;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .autocomplete-items div {
