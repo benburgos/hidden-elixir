@@ -1,10 +1,9 @@
 const ingredients = document.querySelector('#ingredients');
+const drinkList = document.querySelector('#drinklist');
 let ingredientList = [];
 let selectedIngredients = [];
-let drinkData = {};
-const drinkList = document.querySelector('#drinklist');
-let filteredDrinks = [];
-let drinkIds = [];
+let filteredDrinks = {};
+let ordered = [];
 
 $.ajax('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
     .then((data) => {
@@ -14,6 +13,7 @@ $.ajax('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
     });
 
 $('#addIt').click(function(){
+  drinkList.innerHTML = "";
   let inputValue = $('#myInput').val();
   function capitalize(inputValue) {
     return inputValue.charAt(0).toUpperCase() + inputValue.slice(1);
@@ -23,20 +23,34 @@ $('#addIt').click(function(){
   $button.text(formattedIngredient);
   $(ingredients).append($button);
   selectedIngredients.push($('#myInput').val().split(' ').join('_'));
-  console.log(selectedIngredients)
-});
-
-$('#showMe').click(function(){
   $.ajax(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${$('#myInput').val()}`)
     .then((data) => {
         for(let drink in data.drinks){
-            filteredDrinks.push(data.drinks[drink].strDrink)
-            const $div = $('<div id=new-drink>');
-            $div.html(`<img src="${data.drinks[drink].strDrinkThumb}" alt="${data.drinks[drink].strDrink}"/>${data.drinks[drink].strDrink}`)
-            $(drinkList).append($div);
+          if(!filteredDrinks[data.drinks[drink].strDrink]){
+            ordered.push(data.drinks[drink].strDrink)
+          }  
+          filteredDrinks[data.drinks[drink].strDrink] = {
+              drinkName: data.drinks[drink].strDrink,
+              drinkImg: data.drinks[drink].strDrinkThumb,
+              drinkId: data.drinks[drink].idDrink,
+            }
         }
-    })
+  $('#myInput').val('');
+})});
+
+$('#showMe').click(render = () => {
+  ordered = ordered.sort();
+  console.log(ordered)
+  for(let drink of ordered){
+    drink = filteredDrinks[drink];
+    console.log(drink)
+    const $div = $('<div id=new-drink>');
+    $div.html(`<img src="${drink.drinkImg}" alt="${drink.drinkName}"/>${drink.drinkName}`)
+    $(drinkList).append($div);
+  }
+  console.log(filteredDrinks)
 });
+
 
 
 function autocomplete(inp, arr) {
