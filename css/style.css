@@ -1,14 +1,25 @@
 body {
-    background-color: teal;
-    color: white;
+    background-color:  #025680;
+    color: #03aba0;
+    font-family: 'Hubballi', cursive;
+    border: 3px solid;
+    border-radius: 15px;
+}
+
+h1 {
+    font-family: 'Mansalva', cursive;
+    font-size: 75px;
 }
 
 button {
-    background-color: teal;
-    color: white;
+    background-color: #025680;
+    color: #03aba0;
+    font-family: 'Hubballi', cursive;
+    font-size: 18px;
+    font-weight: bold;
     border: 3px solid;
-    border-radius: 4px;
-    padding: 12px 28px;
+    border-radius: 15px;
+    padding: 12px 15px;
 }
 
 img {
@@ -20,7 +31,18 @@ img {
     display: flex;
 }
 
+#showMe,#addIt,#startOver {
+    background-color: #0395ab;
+    color: #025680;
+    font-family: 'Hubballi', cursive;
+    font-size: 20px;
+    font-weight: bold;
+    border: 3px solid;
+    border-radius: 15px;
+    padding: 12px 15px;
+}
+
 #new-drink {
-    color: white;
+    font-size: 20px;
     font-weight: bold;
 }
