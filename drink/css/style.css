@@ -1,0 +1,44 @@
+body {
+    background-color:  #025680;
+    color: #03aba0;
+    font-family: 'Hubballi', cursive;
+    border: 3px solid;
+    border-radius: 15px;
+}
+
+h1 {
+    text-align: center;
+}
+
+hr {
+    border: 1px dashed;
+}
+
+#all-content {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+}
+
+#left {
+    display: flex;
+}
+
+#right {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+main {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+}
