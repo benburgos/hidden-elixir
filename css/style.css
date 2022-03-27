@@ -30,6 +30,7 @@ button {
     border: 3px solid;
     border-radius: 15px;
     padding: 12px 15px;
+    margin: 2px;
 }
 
 img {
