@@ -41,15 +41,12 @@ $('#addIt').click(function(){
 
 $('#showMe').click(render = () => {
   ordered = ordered.sort();
-  console.log(ordered)
   for(let drink of ordered){
     drink = filteredDrinks[drink];
-    console.log(drink)
     const $div = $('<div id=new-drink>');
     $div.html(`<img src="${drink.drinkImg}" alt="${drink.drinkName}"/>${drink.drinkName}`)
     $(drinkList).append($div);
   }
-  console.log(filteredDrinks)
 });
 
 document.querySelector('#startOver').addEventListener('click', () => {
