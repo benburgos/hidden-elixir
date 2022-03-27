@@ -44,7 +44,9 @@ $('#showMe').click(render = () => {
   for(let drink of ordered){
     drink = filteredDrinks[drink];
     const $div = $('<div id=new-drink>');
-    $div.html(`<img src="${drink.drinkImg}" alt="${drink.drinkName}"/>${drink.drinkName}`)
+    $div.html(
+      `<img src="${drink.drinkImg}" alt="${drink.drinkName}"/><a href="./drink/drink.html?i=${drink.drinkId}" target="_blank">${drink.drinkName}</a>`
+      )
     $(drinkList).append($div);
   }
 });

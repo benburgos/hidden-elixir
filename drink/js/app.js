@@ -1,5 +1,5 @@
-const url = window.location.href;
-
+const urlQuery = window.location.search;
+console.log(urlQuery)
 const header = $('header')
 const h1 = $('<h1>')
 const img = $('<img>')
@@ -12,7 +12,7 @@ const drinkInstructions = $('#drink-instructions')
 const ingredients = [];
 const measurements = [];
 
-$.ajax(url)
+$.ajax(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php${urlQuery}`)
     .then((data) => {
         h1.text(data.drinks[0].strDrink);
         header.append(h1);
