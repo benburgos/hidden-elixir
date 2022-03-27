@@ -17,7 +17,9 @@ $.ajax(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php${urlQuery}`)
         h1.text(data.drinks[0].strDrink);
         header.append(h1);
         imgHolder.html(`<img src="${data.drinks[0].strDrinkThumb}" alt="${data.drinks[0].strDrink}"/>`)
-        imgSource.html(`<a href="${data.drinks[0].strImageSource}" target="_blank">Image Source</a>`);
+        if (data.drinks[0].strImageSource !== null){
+            imgSource.html(`<a href="${data.drinks[0].strImageSource}" target="_blank">Image Source</a>`);
+        }
         drinkGlass.text(`Glass Type Needed: ${data.drinks[0].strGlass}`);
         ingredients.push(
             data.drinks[0].strIngredient1,
