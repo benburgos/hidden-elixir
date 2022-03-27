@@ -15,6 +15,21 @@ hr {
     border: 1px dashed;
 }
 
+a:link {
+    color: #03aba0;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #03aba0;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
 #all-content {
     display: flex;
     flex-direction: column;

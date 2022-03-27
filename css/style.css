@@ -16,9 +16,19 @@ h1 {
     margin: 20px;
 }
 
-p {
-    font-family: 'Mansalva', cursive;
-    font-size: 25px;
+a:link {
+    color: #03aba0;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #03aba0;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
 }
 
 button {
