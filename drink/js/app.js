@@ -1,5 +1,4 @@
-// const url = window.location.href;
-const url = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007'
+const url = window.location.href;
 
 const header = $('header')
 const h1 = $('<h1>')
