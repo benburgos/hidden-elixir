@@ -103,7 +103,6 @@ img {
     margin: 5px;
 }
 
-
 #showMe,#addIt,#startOver {
     background-color: #0395ab;
     color: #025680;
@@ -118,6 +117,7 @@ img {
 #startOver {
     margin: 5px;
 }
+
 .autocomplete-items {
     position: relative;
     border: 1px solid #d4d4d4;
