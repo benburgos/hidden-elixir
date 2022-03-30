@@ -31,5 +31,5 @@
 
 ## Future Enhancements
 - Multiple ingredient filter
-    - In it's current state, **Hidden Elixir** is only capable of providing a list of drinks that contain the ingredients selected. For example, a Margarita contains *Tequila*, *Lime*, and *Salt* - searching for just *Lime* will return a Margarita in the search, rather than having to search for *Tequila*, *Lime*, and *Salt* to show a Margarita.
+    - In its current state, **Hidden Elixir** is only capable of providing a list of drinks that contain the ingredients selected. For example, a Margarita contains *Tequila*, *Lime*, and *Salt* - searching for just *Lime* will return a Margarita in the search, rather than having to search for *Tequila*, *Lime*, and *Salt* to show a Margarita.
     - TL;DR - Currently **Hidden Elixir** only displays drinks per ingredient, in the future it will filter down the list to only show the cocktails you can make with *only* the ingredients you select.
