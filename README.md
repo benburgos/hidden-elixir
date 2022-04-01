@@ -2,6 +2,8 @@
 
 **Hidden Elixir** is a simple website that ingests ingredients you have on hand at home and returns cocktails that contain the ingredients you have.
 
+[Hidden Elixir Live Site](https://benburgos.github.io/hidden-elixir/)
+
 ## Technologies Used
 - HTML 5
 - CSS 3
